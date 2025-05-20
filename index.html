@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Khire | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon for most browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    
+    <!-- Fallback for older browsers -->
+    <link rel="shortcut icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="/">Mustaf Khire</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experiences">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="assets/resume.pdf" id="resume-link" target="_blank">View Resume</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - REDUCED HEIGHT -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Software Developer</h1>
+                <p>Developing software that drives business value through scalable systems and intuitive interfaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/mk.jpeg" alt="Mustaf Khire">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a Software Developer with expertise in full-stack development, database management, and building user-friendly applications. My technical background includes proficiency in multiple programming languages and frameworks.</p>
+                    <p>I graduated from Seneca College with an Honours Bachelor of Technology in Software Development, where I developed a strong foundation in software engineering principles and best practices.</p>
+                    <p>Based in Toronto, I'm passionate about creating efficient, scalable solutions that solve real-world problems. I enjoy collaborating with teams to deliver high-quality software products that exceed client expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SQL</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technologies</h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>Bootstrap</li>
+                        <li>Django</li>
+                        <li>REST API</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Developer Tools</h3>
+                    <ul class="skill-list">
+                        <li>Power BI</li>
+                        <li>Postman</li>
+                        <li>Azure DevOps</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section - FIXED IMAGES -->
+    <section id="experiences" class="experiences">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/citytaxi.jpg" alt="City Taxi Toronto">
+                    </div>
+                    <div class="project-info">
+                        <h3>Senior Dispatcher</h3>
+                        <p>City Taxi Toronto, Jan 2023 - Present</p>
+                        <ul class="experience-details">
+                            <li>Efficiently handled incoming corporate account, parcel, and cash calls</li>
+                            <li>Communicated effectively with drivers and customers</li>
+                            <li>Monitored and managed dispatch logs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/OMT.jpg" alt="Ontario Ministry of Transportation">
+                    </div>
+                    <div class="project-info">
+                        <h3>Junior Technical Analyst (Co-op)</h3>
+                        <p>Ontario Ministry of Transportation, Sep 2022 - Jan 2023</p>
+                        <ul class="experience-details">
+                            <li>Designed and implemented Power BI dashboards</li>
+                            <li>Developed ETL workflows using Informatica, SQL, and Python</li>
+                            <li>Collaborated within an Agile development framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - REDESIGNED WITHOUT IMAGES -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h2>Django CRM Application</h2>
+                    <p>Developed a comprehensive Customer Relationship Management system using Python, Django, and PostgreSQL to streamline customer interactions and data management.</p>
+                    <p>The application features a responsive Bootstrap UI, secure role-based authentication, and intuitive dashboards for tracking customer information, sales leads, and activity.</p>
+                    <p>Implemented full CRUD operations for efficient data management and optimized the application for scalability and reliability.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h2>Blog Post Back-End API</h2>
+                    <p>Collaborated with a team to develop a RESTful API that interacts with a React front-end, providing secure login and registration functionality.</p>
+                    <p>Implemented a well-defined system development life cycle (SDLC) to manage the project efficiently, delivering high-quality results that met consumer expectations.</p>
+                    <p>Prioritized security and privacy by restricting database access and enhancing the login system's robustness.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Interested in working together? Feel free to reach out via the form or through my email for job opportunities, collaborations, or just to say hello.</p>
+                <p>Email: mustafa.khire@gmail.com</p>
+                <p>Based in Toronto, Ontario, Canada</p>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mustafa.khire@gmail.com" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">Send Message</button>
+                </form>
+                <div id="form-status"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="https://linkedin.com/in/mustaf-khire/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/mustafkhire" target="_blank">GitHub</a></li>
+            </ul>
+            <p class="copyright">© 2025 Mustaf Khire. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
