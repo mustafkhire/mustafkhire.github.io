@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (resumeLink) {
         resumeLink.addEventListener('click', function(e) {
             e.preventDefault();
-            window.open('assets/resume.pdf', '_blank');
+            window.open('assets/Resume.pdf', '_blank');
         });
     }
     
