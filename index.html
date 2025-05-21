@@ -198,19 +198,29 @@
             </div>
             <div class="contact-form">
                 <form action="https://formspree.io/f/mustafa.khire@gmail.com" method="POST" id="contact-form">
+                <!-- Visitor's Name -->
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
+                
+                <!-- Visitor's Email (uses _replyto for Formspree) -->
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <!-- Change name="email" to name="_replyto" -->
+                    <label for="email">Your Email</label>
                     <input type="email" id="email" name="_replyto" required>
+                    <!-- 
+                    Formspree SPECIAL: 
+                    - "_replyto" field automatically becomes the reply-to address
+                    - The form action email (mustafa.khire@gmail.com) receives the message
+                    -->
                 </div>
+                
+                <!-- Message -->
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
+                
                 <button type="submit" id="submit-btn">Send Message</button>
                 </form>
                 <div id="form-status"></div>
