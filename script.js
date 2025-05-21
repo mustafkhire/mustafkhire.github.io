@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on scroll
     window.addEventListener('scroll', revealOnScroll);
 
-    // Contact Form Handling
+    // Enhanced Contact Form Handling
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const formStatus = document.getElementById('form-status');
@@ -57,11 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             // Set loading state
-            submitBtn.classList.add('loading');
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.innerHTML = '<span class="btn-text">Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+            formStatus.style.display = 'none';
             
             try {
+                // First validate the form
+                if (!contactForm.checkValidity()) {
+                    throw new Error('Please fill all required fields');
+                }
+
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: new FormData(contactForm),
@@ -70,26 +75,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
-                if (response.ok) {
+                const responseData = await response.json();
+                
+                if (response.ok && responseData.success) {
                     formStatus.textContent = 'Message sent successfully!';
                     formStatus.className = 'success';
+                    formStatus.style.display = 'block';
                     contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                    }, 5000);
                 } else {
-                    throw new Error('Failed to send message');
+                    throw new Error(responseData.error || 'Failed to send message');
                 }
             } catch (error) {
-                formStatus.textContent = 'Error sending message. Please try again.';
+                formStatus.textContent = error.message || 'Error sending message. Please try again.';
                 formStatus.className = 'error';
+                formStatus.style.display = 'block';
                 console.error('Form submission error:', error);
             } finally {
-                submitBtn.classList.remove('loading');
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-                
-                // Hide status message after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
+                submitBtn.innerHTML = '<span class="btn-text">Send Message</span>';
             }
         });
     }
